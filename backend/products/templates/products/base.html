@@ -1,10 +1,8 @@
-
-
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Sublime</title>
+<title>{{ title }}</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Sublime project">
@@ -33,23 +31,14 @@
 							<nav class="main_nav">
 								<ul>
 									<li class="hassubs active">
-										<a href="index.html">Начало</a>
+										<a href="{% url 'index' %}">Начало</a>
 										<ul>
-											<li><a href="categories.html">Категории</a></li>
+											<li><a href="{% url 'products:categories' %}">Категории</a></li>
 											<li><a href="cart.html">Корзина</a></li>
 											<li><a href="contact.html">Контакты</a></li>
 										</ul>
 									</li>
-									<li class="hassubs">
-										<a href="categories.html">Категории</a>
-										<ul>
-											<li><a href="categories.html">Category</a></li>
-											<li><a href="categories.html">Category</a></li>
-											<li><a href="categories.html">Category</a></li>
-											<li><a href="categories.html">Category</a></li>
-											<li><a href="categories.html">Category</a></li>
-										</ul>
-									</li>
+                                    <li><a href="{% url 'products:categories' %}">Категории</a></li>
 									<li><a href="#">Аксессуары</a></li>
 									<li><a href="contact.html">Контакты</a></li>
 								</ul>
@@ -138,9 +127,9 @@
 				</div>
 				<ul class="page_menu_nav menu_mm">
 					<li class="page_menu_item has-children menu_mm">
-						<a href="index.html">Home<i class="fa fa-angle-down"></i></a>
+						<a href="">Начало<i class="fa fa-angle-down"></i></a>
 						<ul class="page_menu_selection menu_mm">
-							<li class="page_menu_item menu_mm"><a href="categories.html">Categories<i class="fa fa-angle-down"></i></a></li>
+							<li class="page_menu_item menu_mm"><a href="{% url 'products:categories' %}">Categories<i class="fa fa-angle-down"></i></a></li>
 							<li class="page_menu_item menu_mm"><a href="product.html">Product<i class="fa fa-angle-down"></i></a></li>
 							<li class="page_menu_item menu_mm"><a href="cart.html">Cart<i class="fa fa-angle-down"></i></a></li>
 							<li class="page_menu_item menu_mm"><a href="checkout.html">Checkout<i class="fa fa-angle-down"></i></a></li>
@@ -148,7 +137,7 @@
 						</ul>
 					</li>
 					<li class="page_menu_item has-children menu_mm">
-						<a href="categories.html">Categories<i class="fa fa-angle-down"></i></a>
+						<a href="{% url 'products:categories' %}">Категории<i class="fa fa-angle-down"></i></a>
 						<ul class="page_menu_selection menu_mm">
 							<li class="page_menu_item menu_mm"><a href="categories.html">Category<i class="fa fa-angle-down"></i></a></li>
 							<li class="page_menu_item menu_mm"><a href="categories.html">Category<i class="fa fa-angle-down"></i></a></li>
